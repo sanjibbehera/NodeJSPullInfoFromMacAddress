@@ -16,24 +16,33 @@ if(!bool){
     console.log('Invalid MAC Address provided to the program!!');
     process.exit(1);
 }
-var macaddrpath = '/v1?apiKey=' + api_token + '&output=json&search=';
-console.log(macaddrpath);
+var macaddrpath = '/v1?output=json&search=';
 macaddrpath += macaddrinfo;
 
 const options = {
   hostname: 'api.macaddress.io',
   port: 443,
   path: macaddrpath,
-  method: 'GET'
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'X-Authentication-Token': api_token
+  }
 }
 
 var req = https.request(options, function(res) {
     res.setEncoding('utf8');
     res.on('data', function (data) {
-         var jsonObject = JSON.parse(data);
-         var CompanyName = jsonObject.vendorDetails.companyName;
-         var CompanyAddress = jsonObject.vendorDetails.companyAddress;
-         console.log('Vendor Details of the provided MAC Address <' + macaddrinfo +  '> is: '  + CompanyName + ' having Address: ' + CompanyAddress);
+        var jsonObject = JSON.parse(data);
+        var keys = Object.keys(jsonObject);        
+        if(keys != "error") {
+          var CompanyName = jsonObject.vendorDetails.companyName;
+          var CompanyAddress = jsonObject.vendorDetails.companyAddress;
+          console.log('Vendor Details of the provided MAC Address <' + macaddrinfo +  '> is: '  + CompanyName + ' having Address: ' + CompanyAddress);
+         }
+         else{
+           console.log('Incorrect API Token provided');
+         }
     });
   });
   req.on('error', function(e) {
