@@ -1,0 +1,22 @@
+{
+  "name": "nodejspullinfofrommacaddress",
+  "version": "1.0.0",
+  "description": "Pull Information from REST API",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjibbehera/NodeJSPullInfoFromMacAddress.git"
+  },
+  "author": "Sanjib Behera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjibbehera/NodeJSPullInfoFromMacAddress/issues"
+  },
+  "homepage": "https://github.com/sanjibbehera/NodeJSPullInfoFromMacAddress#readme",
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}
