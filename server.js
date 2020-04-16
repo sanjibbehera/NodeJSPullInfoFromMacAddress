@@ -2,15 +2,6 @@ const https = require('https');
 
 var macaddrpath = '/v1?apiKey=at_D7J4WtYNagBtjGcaOtaW33nzeYp5x&output=json&search=';
 
-
-/*
-const readline = require('readline-sync');
-var macaddrpath = '/v1?apiKey=at_D7J4WtYNagBtjGcaOtaW33nzeYp5x&output=json&search=';
-let macaddrinfo = readline.question('Provide the MAC Address for which you want to know the Company details?');
-macaddrpath += macaddrinfo;
-console.log('STDIN Entry is: '+ macaddrinfo);
-console.log('MAC Addr path is: '+ macaddrpath);*/
-
 var length = process.argv.length;
 if(length != 3){
     console.log('Invalid argument provided, pass MAC address as parameter to the program!!');
