@@ -31,6 +31,14 @@ const options = {
 }
 
 var req = https.request(options, function(res) {
+    var href='';
+    if(options.port === 443){
+      href='https';
+    }
+    else if(options.port === 80){
+      href='http';
+    }
+    console.log('URL being triggered to get the information: '+ href+"://"+options.hostname+options.path + ' and the HTTP Method is: ' + options.method);
     res.setEncoding('utf8');
     res.on('data', function (data) {
         var jsonObject = JSON.parse(data);
@@ -41,7 +49,7 @@ var req = https.request(options, function(res) {
           console.log('Vendor Details of the provided MAC Address <' + macaddrinfo +  '> is: '  + CompanyName + ' having Address: ' + CompanyAddress);
          }
          else{
-           console.log('Incorrect API Token provided');
+           console.log('Errorneous Response: Incorrect API Token provided');
          }
     });
   });
