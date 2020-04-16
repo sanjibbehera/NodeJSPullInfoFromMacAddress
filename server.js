@@ -41,7 +41,7 @@ var req = https.request(options, function(res) {
          var jsonObject = JSON.parse(data);
          var CompanyName = jsonObject.vendorDetails.companyName;
          var CompanyAddress = jsonObject.vendorDetails.companyAddress;
-         console.log('Vendor Details of the provided MAC Address is: '  + CompanyName + ' having Address: ' + CompanyAddress);
+         console.log('Vendor Details of the provided MAC Address <' + macaddrinfo +  '> is: '  + CompanyName + ' having Address: ' + CompanyAddress);
          //console.log(jsonObject.vendorDetails);
     });
   });
