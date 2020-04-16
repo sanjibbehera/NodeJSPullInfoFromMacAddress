@@ -3,8 +3,9 @@ Call a REST API via Command Line and Retrieve Information from MAC ADDRESS!!
 
 <b> URL 'https://macaddress.io/' provides information about MAC ADDRESS.</b>  
 <b> We can retrieve information via REST API hosted at 'https://api.macaddress.io/v1'</b>  
-<b> Either by Query Based Authentication or Header Based Authentication </b>
-<b> I have used Header Based Authentication </b>
+<b> Either by Query Based Authentication or Header Based Authentication </b>  
+<b> I have used Header Based Authentication here to retreive the details via MAC Address.</b>  
+<b> An appropriate API_TOKEN has to be provided to get the details or the 
 
 <b> the below is example of how to get the Company info by providing MAC Address.</b>  
 node server.js 44:38:39:ff:ef:57 <API_TOKEN>
