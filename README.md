@@ -15,9 +15,19 @@ Call a REST API via Command Line and Retrieve Information from MAC ADDRESS!!
      iii) To add separate logging file and as well as redirect logging to stdout.  
      iv) To add debugging capabilities  
      v) To extend error handling capabilities  
-     vi) To add testing capabilities that check the source code for any flaws and prepare test report.  
+     vi) To add testing capabilities that check the source code for any flaws and prepare test report. 
+     
+Usage
+============================
+    This Tool has been tested in CentOS 7.6 Linux Docker Host and CentOS 7.6 Linux.
+     Usage on a Linux VM:
+       node server.js 44:38:39:ff:ef:57 <API_TOKEN>
+     Usage on a Docker Host:
+       docker run -it <DOCKER IMAGE NAME> 44:38:39:ff:ef:57 <API_TOKEN>
+       
 
-### Steps to execute the code in normal Linux VM.
+
+#### Steps to execute the code in normal Linux VM.
     Below is the example, how to retrieve the Company info by providing MAC Address in command line. 
     How to run this program in Linux Server.  
     Pre-requisite:  
@@ -31,7 +41,7 @@ Call a REST API via Command Line and Retrieve Information from MAC ADDRESS!!
     Proper Example is: node server.js <MAC ADDRESS> <API_TOKEN> 
     
 
-### Steps to execute the code in normal Docker Host.
+#### Steps to execute the code in normal Docker Host.
     How to run this program in Docker Host.  
     Pre-requisite:  
     Docker & GIT must be installed in the Unix environment and access to Docker Hub is a must.  
@@ -42,4 +52,4 @@ Call a REST API via Command Line and Retrieve Information from MAC ADDRESS!!
     docker run -it macapps 44:38:39:ff:ef:57 <API_TOKEN>
 
 #### Output of the Program for a valid Mac Address should look below:-   
-<b> Vendor Details of the provided MAC Address <44:38:39:ff:ef:57> is: Cumulus Networks, Inc having Address: 650 Castro Street, suite 120-245 Mountain View CA 94041 US</b>
+    Vendor Details of the provided MAC Address <44:38:39:ff:ef:57> is: Cumulus Networks, Inc having Address: 650 Castro Street, suite 120-245 Mountain View CA 94041 US
